@@ -22,8 +22,27 @@ text = 'Hello___world___python'
 # print(text.split('___'), 1)
 # # print(text.rsplit('___'), 1)
 # print(' | '.join(['hello', 'world']))
+# text = input('enter text: ')
+# first_space = text.find(' ')
+# last_space = text.rfind(' ')
+# first_space =
 
-text
+
+#text = input().lower()
+#print(text == text[::-1])
+
+# f = input('f: ')
+# s = input('s: ')
+# print(f - (2 * s))
+
+
+# dad = int(input())
+# sun = int(input())
+# print(dad - sun * 2)
+
+
+
+
 
 
 
