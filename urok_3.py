@@ -17,3 +17,13 @@ text4 = f'Hello {name} your age {age * 2} is human {is_human}'
 #print(f'{3.14159:.2f}')
 
 # print('\N{fire}')
+
+text = 'Hello___world___python'
+# print(text.split('___'), 1)
+# # print(text.rsplit('___'), 1)
+# print(' | '.join(['hello', 'world']))
+
+text
+
+
+
