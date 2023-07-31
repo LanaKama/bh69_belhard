@@ -55,9 +55,39 @@ conn.commit()
 cur.execute("delete from category where name like '%акция%';")
 conn.commit()
 
+products = (
+    ('Cappuccino', 5.5, 1),
+    ('Latte', 6.5, 1),
+)
 
+# cur.executemany('insert into product (name, price, category_id) values (?, ?, ?);', products)
+# conn.commit()
+#
+# cur.execute('insert into category (name) values (?);', ('Tea', ))
+# conn.commit()
 
+cur.execute('''
+    select c.name, p.name,  p.price from category c
+    join product p on c.id = p.category_id
+    where p.is_published = true;
 
+'''
+)
+
+cur.execute('''
+    select c.name, p.name,  p.price from category c
+    left join product p on c.id = p.category_id
+    where p.is_published = true;
+
+'''
+)
+
+from psycopg2 import connect
+
+with connect('postgresql://bh69:888777888@.0.0.0:5432/bh69') as conn:
+    with conn.cutsor() as cur:
+        cur.execute("insert into category(name) values(%s);", ('Coffe', ))
+        conn.commit()
 
 
 
